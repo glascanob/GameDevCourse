@@ -703,6 +703,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1478625364}
+  rb: {fileID: 1478625367}
+  jumpForce: 500
 --- !u!50 &1478625367
 Rigidbody2D:
   serializedVersion: 4

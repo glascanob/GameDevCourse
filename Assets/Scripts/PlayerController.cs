@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Animator anim;
+    public Rigidbody2D rb;
+
+    public int jumpForce;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,7 @@ public class PlayerController : MonoBehaviour
        if(Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("Jump");
+            rb.AddForce(Vector2.up * jumpForce);
         }
     }
 }
