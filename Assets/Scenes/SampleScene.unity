@@ -2082,6 +2082,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mage
       objectReference: {fileID: 0}
+    - target: {fileID: 4929074149243861504, guid: 835301242aa1f45aa97c66f2f16f71ce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5263647050124775856, guid: 835301242aa1f45aa97c66f2f16f71ce,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -2969,10 +2974,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 734067328, guid: b8a53f41be9d841c8872c2314497ebba, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.74
-      objectReference: {fileID: 0}
     - target: {fileID: 7092969293105443640, guid: b8a53f41be9d841c8872c2314497ebba,
         type: 3}
       propertyPath: m_Name
