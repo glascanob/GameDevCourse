@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public Transform[] spawnPositions;
+    public Transform endPosition;
+
     public int currentScore = 0;
 
     public Text score;
