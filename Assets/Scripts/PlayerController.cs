@@ -48,6 +48,8 @@ public class PlayerController : MonoBehaviour
 
     public void GameOver()
     {
+        //Now just stop the camera controller and kill the player
+        GameManager.instance.cam.followPlayer = false;
         //Instantiate a particle system as the death effect
         Instantiate(deathEffect, effectPosition.position, Quaternion.identity);
         gameOver.SetActive(true);

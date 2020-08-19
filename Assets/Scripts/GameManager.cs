@@ -12,10 +12,13 @@ public class GameManager : MonoBehaviour
 
     public Text score;
 
+    public CameraController cam;
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+        cam = Camera.main.GetComponent<CameraController>();
     }
 
     // Update is called once per frame
