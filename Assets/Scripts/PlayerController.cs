@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //Variables
-    public Animator anim;
-    public Rigidbody2D rb;
+    Animator anim;
+    Rigidbody2D rb;
 
     public int jumpForce;
 
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask groundLayer;
 
-    public bool grounded;
+    bool grounded;
 
     public Transform effectPosition;
 
@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
     //Update method used for physics in our game, because it happens every fixed amoun of time
     void FixedUpdate()

@@ -11,11 +11,17 @@ public class GameManager : MonoBehaviour
     public Transform[] spawnPositions;
     public Transform endPosition;
 
-    public int currentScore = 0;
+    [Tooltip("End position of the background tiles")]
+    public Transform endPosBG;
+
+    int currentScore = 0;
 
     public Text score;
 
+    [HideInInspector]
     public CameraController cam;
+
+    public PlayerController player;
 
     // Start is called before the first frame update
     void Start()
