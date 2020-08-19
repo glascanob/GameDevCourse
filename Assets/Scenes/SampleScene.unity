@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac9bc32cf40e46e6b6d37edb0084c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1478625366}
   spawnPositions:
   - {fileID: 648216096}
   - {fileID: 396796433}
@@ -238,8 +239,8 @@ MonoBehaviour:
   endPosition: {fileID: 1738544889}
   endPosBG: {fileID: 1966338110}
   score: {fileID: 1165372467}
+  gameOver: {fileID: 346919667}
   cam: {fileID: 0}
-  player: {fileID: 1478625366}
 --- !u!4 &84740812
 Transform:
   m_ObjectHideFlags: 0
@@ -2328,7 +2329,6 @@ MonoBehaviour:
   effectPosition: {fileID: 142107397}
   deathEffect: {fileID: 5713397521044300431, guid: b48ef0fd7c70441058b7cbdf83f95743,
     type: 3}
-  gameOver: {fileID: 346919667}
 --- !u!50 &1478625367
 Rigidbody2D:
   serializedVersion: 4
