@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     ShieldController shield;
 
+    public bool shieldOn = false;
+
     float shieldCD = 2f;
 
     // Start is called before the first frame update
@@ -52,10 +54,12 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.S))
         {
             shield.gameObject.SetActive(true);
+            shieldOn = true;
         }
         if(Input.GetKeyUp(KeyCode.S))
         {
             shield.gameObject.SetActive(false);
+            shieldOn = false;
         }
     }
 

@@ -8,6 +8,7 @@ public class KillPlayerOnContact : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            //if(!GameManager.instance.player.shieldOn) if we want the shield to avoid damage
             collision.GetComponent<PlayerController>().GameOver();
         }
     }
