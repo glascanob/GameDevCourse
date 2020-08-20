@@ -20,11 +20,17 @@ public class PlayerController : MonoBehaviour
 
     public GameObject deathEffect;
 
+    ShieldController shield;
+
+    float shieldCD = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        shield = GetComponentInChildren<ShieldController>();
+        shield.gameObject.SetActive(false);
     }
     //Update method used for physics in our game, because it happens every fixed amoun of time
     void FixedUpdate()
@@ -42,6 +48,15 @@ public class PlayerController : MonoBehaviour
 
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("Grounded", grounded);
+
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            shield.gameObject.SetActive(true);
+        }
+        if(Input.GetKeyUp(KeyCode.S))
+        {
+            shield.gameObject.SetActive(false);
+        }
     }
 
     public void GameOver()
