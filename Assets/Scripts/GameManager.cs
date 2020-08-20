@@ -20,6 +20,11 @@ public class GameManager : MonoBehaviour
     [Tooltip("End position of the background tiles")]
     public Transform endPosBG;
 
+    [Header("Moving Hazard Variables")]
+    [Tooltip("If you don't see the spaces to add the spawnPositions click the little arrow and type the number then enter")]
+    public Transform[] spawnPosMovHazard;
+    public Transform endPosMovHazard;
+
     int currentScore = 0;
 
     [Header("UI Elements")]
