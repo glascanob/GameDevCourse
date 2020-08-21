@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("Grounded", grounded);
 
-        if(!shieldOnCD && Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.S))
         {
             TurnOnShield();
         }
@@ -72,10 +72,20 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
+    public void Jump()
+    {
+        if (grounded)
+        {
+            anim.SetTrigger("Jump");
+            rb.AddForce(Vector2.up * jumpForce);
+        }
+    }
     public void TurnOnShield()
     {
-        StartCoroutine(ShieldUpCo());
+        if (!shieldOnCD)
+        {
+            StartCoroutine(ShieldUpCo());
+        }
     }
 
     IEnumerator ShieldUpCo()
